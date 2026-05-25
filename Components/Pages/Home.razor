@@ -1,0 +1,165 @@
+﻿@page "/"
+
+<PageTitle>About Me | Nean Mae Abenasa</PageTitle>
+
+<div class="about-container fade-in">
+    <div class="profile-header">
+        <h1 class="neon-text">NEAN MAE ABENASA</h1>
+        <h3 class="location-tag">>_ SYS.LOC: Camara, Bateria, Daanbantayan, Cebu</h3>
+    </div>
+
+    <div class="terminal-box mt-5">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">user_profile.exe</span>
+        </div>
+        <div class="terminal-body">
+            <p><span class="prompt">root@nean-sys:~#</span> ./load_bio.sh</p>
+            <p class="sys-msg">Initializing profile data...</p>
+            <p class="sys-msg">Extracting location data: Camara, Bateria, Daanbantayan...</p>
+            <br>
+            <p class="bio-text">
+                > Welcome to my digital space. I am Nean Mae Abenasa. 
+            </p>
+            <p class="bio-text">
+                > I am currently pursuing a Bachelor of Science in Information Technology (BSIT) at Cebu Technological University - DB Campus. 
+    Passionate about technology, creativity, and innovation, I enjoy exploring different areas of programming, web development, 
+    and digital design. I believe that learning never stops, and I continue to improve my skills through experience and personal projects.
+            </p>
+            <p class="bio-text">
+                > Beyond academics, I enjoy listening to music, discovering aesthetic digital designs, and spending time improving my creative mindset. 
+    I am someone who values consistency, growth, and determination. My goal is to become a successful IT professional capable of building 
+    impactful and modern digital solutions in the future.
+            </p>
+            <br>
+            <p><span class="prompt text-success">STATUS: 200 OK</span> - Data loaded successfully. Awaiting next command.</p>
+            <span class="cursor">_</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .about-container {
+        padding: 2rem 0;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Header Styling */
+    .profile-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .neon-text {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-shadow: 
+            0 0 5px #ff2a9d,
+            0 0 10px #ff2a9d,
+            0 0 20px #b800ff,
+            0 0 40px #b800ff; /* Pink to purple gradient glow */
+        margin-bottom: 0.5rem;
+    }
+
+    .location-tag {
+        color: #c9a3ff;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    /* Terminal Box Styling */
+    .terminal-box {
+        background-color: #0b0014;
+        border: 1px solid #4a0072;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+        overflow: hidden;
+    }
+
+    .terminal-header {
+        background-color: #1a0029;
+        padding: 10px 15px;
+        border-bottom: 1px solid #4a0072;
+        display: flex;
+        align-items: center;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .dot.red { background-color: #ff5f56; }
+    .dot.yellow { background-color: #ffbd2e; }
+    .dot.green { background-color: #27c93f; }
+
+    .terminal-header .title {
+        color: #c9a3ff;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9rem;
+        margin-left: 15px;
+    }
+
+    .terminal-body {
+        padding: 25px;
+        color: #e0e0e0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .prompt {
+        color: #ff2a9d;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .sys-msg {
+        color: #b800ff;
+        font-style: italic;
+    }
+
+    .bio-text {
+        color: #f2e6ff;
+        margin-bottom: 1rem;
+    }
+
+    .text-success {
+        color: #d000ff !important; /* Bright purple for success msg */
+    }
+
+    /* Blinking Cursor */
+    .cursor {
+        display: inline-block;
+        width: 10px;
+        height: 1.2rem;
+        background-color: #ff2a9d;
+        animation: blink 1s step-end infinite;
+        vertical-align: middle;
+    }
+
+    @@keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    /* Simple Fade In Animation */
+    .fade-in {
+        animation: fadeIn 0.8s ease-in;
+    }
+
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>

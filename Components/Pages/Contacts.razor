@@ -1,0 +1,207 @@
+@page "/contacts"
+
+<PageTitle>Contact | Nean Mae Abenasa</PageTitle>
+
+<div class="contact-container fade-in">
+    <div class="header-section">
+        <h1 class="neon-text">>_ INITIATE_CONTACT</h1>
+        <p class="sys-msg">Opening secure communication channels...</p>
+    </div>
+
+    <div class="contact-grid mt-5">
+        
+        <a href="https://web.facebook.com/nean.mae.abenasa.2025" target="_blank" class="contact-card">
+            <div class="card-glitch"></div>
+            <div class="contact-type">>_ SYS.COMMS.FACEBOOK</div>
+            <div class="contact-value">Nean Mae Abenasa</div>
+            <div class="status-indicator">
+                <span class="dot pulse-pink"></span> Active
+            </div>
+        </a>
+
+        <a href="https://instagram.com/extraa_small" target="_blank" class="contact-card">
+            <div class="card-glitch"></div>
+            <div class="contact-type">>_ SYS.COMMS.INSTAGRAM</div>
+            <div class="contact-value">@@extraa_small</div>
+            <div class="status-indicator">
+                <span class="dot pulse-pink"></span> Active
+            </div>
+        </a>
+
+        <a href="mailto:neanmaeabenasa@gmail.com" class="contact-card">
+            <div class="card-glitch"></div>
+            <div class="contact-type">>_ SYS.COMMS.EMAIL</div>
+            <div class="contact-value text-lowercase">neanmaeabenasa@gmail.com</div>
+            <div class="status-indicator">
+                <span class="dot pulse-purple"></span> Awaiting transmission
+            </div>
+        </a>
+
+        <a href="tel:09987256662" class="contact-card">
+            <div class="card-glitch"></div>
+            <div class="contact-type">>_ SYS.COMMS.MOBILE</div>
+            <div class="contact-value">0998-725-6662</div>
+            <div class="status-indicator">
+                <span class="dot pulse-purple"></span> Line secure
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<style>
+    .contact-container {
+        padding: 2rem 0;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .neon-text {
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-shadow: 
+            0 0 5px #ff2a9d,
+            0 0 10px #ff2a9d,
+            0 0 20px #b800ff;
+        margin-bottom: 0.5rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .sys-msg {
+        color: #b800ff;
+        font-style: italic;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Grid Layout */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Card Styling */
+    .contact-card {
+        display: block;
+        background-color: #1a0029;
+        border: 1px solid #4a0072;
+        border-radius: 8px;
+        padding: 2rem;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(184, 0, 255, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-card:hover {
+        border-color: #ff2a9d;
+        box-shadow: 0 0 20px rgba(255, 42, 157, 0.4);
+        transform: translateY(-5px);
+    }
+
+    /* Cyberpunk subtle hover effect */
+    .card-glitch {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 42, 157, 0.1), transparent);
+        transform: skewX(-20deg);
+        transition: all 0.5s ease;
+    }
+
+    .contact-card:hover .card-glitch {
+        left: 200%;
+        transition: all 0.7s ease;
+    }
+
+    .contact-type {
+        color: #c9a3ff;
+        font-size: 0.9rem;
+        font-family: 'Courier New', Courier, monospace;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-value {
+        color: #f2e6ff;
+        font-size: 1.4rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-card:hover .contact-value {
+        color: #ffffff;
+        text-shadow: 0 0 10px #ff2a9d;
+    }
+
+    /* Status Indicators */
+    .status-indicator {
+        display: flex;
+        align-items: center;
+        color: #888;
+        font-size: 0.85rem;
+        font-family: 'Courier New', Courier, monospace;
+        text-transform: uppercase;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .pulse-pink {
+        background-color: #ff2a9d;
+        box-shadow: 0 0 10px #ff2a9d;
+        animation: pulsePink 2s infinite;
+    }
+
+    .pulse-purple {
+        background-color: #b800ff;
+        box-shadow: 0 0 10px #b800ff;
+        animation: pulsePurple 2s infinite;
+    }
+
+    /* Animations */
+    .fade-in {
+        animation: fadeIn 0.8s ease-in;
+    }
+
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @@keyframes pulsePink {
+        0% { box-shadow: 0 0 0 0 rgba(255, 42, 157, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(255, 42, 157, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 42, 157, 0); }
+    }
+
+    @@keyframes pulsePurple {
+        0% { box-shadow: 0 0 0 0 rgba(184, 0, 255, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(184, 0, 255, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(184, 0, 255, 0); }
+    }
+
+    @@media (max-width: 600px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

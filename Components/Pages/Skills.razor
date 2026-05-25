@@ -1,0 +1,194 @@
+@page "/skills"
+
+<PageTitle>Skills | Nean Mae Abenasa</PageTitle>
+
+<div class="skills-container fade-in">
+    <div class="header-section">
+        <h1 class="neon-text">>_ CORE_COMPETENCIES</h1>
+        <p class="sys-msg">Loading skill matrices...</p>
+    </div>
+
+    <div class="skills-grid mt-5">
+        
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="skill-name">Communication Skills</span>
+                <span class="skill-value">95%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 95%;"></div>
+            </div>
+            <p class="skill-desc">> Ability to express ideas clearly and work well with others.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="skill-name">Leadership Skills</span>
+                <span class="skill-value">88%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 88%; animation-delay: 0.2s;"></div>
+            </div>
+            <p class="skill-desc">> Ability to guide, motivate, and manage a team.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="skill-name">Problem-Solving Skills</span>
+                <span class="skill-value">92%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 92%; animation-delay: 0.4s;"></div>
+            </div>
+            <p class="skill-desc">> Ability to analyze situations and find effective solutions.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="skill-name">Time Management Skills</span>
+                <span class="skill-value">90%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 90%; animation-delay: 0.6s;"></div>
+            </div>
+            <p class="skill-desc">> Ability to organize tasks and complete work on time.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="skill-name">Technical Skills</span>
+                <span class="skill-value">85%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 85%; animation-delay: 0.8s;"></div>
+            </div>
+            <p class="skill-desc">> Knowledge and ability to use technology, software, or tools related to work or studies.</p>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .skills-container {
+        padding: 2rem 0;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .neon-text {
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-shadow: 
+            0 0 5px #ff2a9d,
+            0 0 10px #ff2a9d,
+            0 0 20px #b800ff;
+        margin-bottom: 0.5rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .sys-msg {
+        color: #b800ff;
+        font-style: italic;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Grid Layout */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Card Styling */
+    .skill-card {
+        background-color: #1a0029;
+        border: 1px solid #4a0072;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(184, 0, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+        border-color: #ff2a9d;
+        box-shadow: 0 5px 20px rgba(255, 42, 157, 0.2);
+        transform: translateY(-3px);
+    }
+
+    .skill-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.8rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+
+    .skill-name {
+        color: #f2e6ff;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .skill-value {
+        color: #ff2a9d;
+        text-shadow: 0 0 5px rgba(255, 42, 157, 0.5);
+    }
+
+    /* Progress Bar */
+    .progress-bar-bg {
+        width: 100%;
+        height: 12px;
+        background-color: #0b0014;
+        border-radius: 10px;
+        border: 1px solid #333;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    .progress-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #b800ff, #ff2a9d);
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ff2a9d;
+        /* Animation setup */
+        width: 0; 
+        animation: fillBar 1.5s ease-out forwards;
+    }
+
+    .skill-desc {
+        color: #c9a3ff;
+        font-size: 0.9rem;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+    }
+
+    /* Animations */
+    .fade-in {
+        animation: fadeIn 0.8s ease-in;
+    }
+
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @@keyframes fillBar {
+        from { width: 0; }
+        /* The 'to' state is handled by the inline style width */
+    }
+
+    /* Responsive adjustment for smaller screens */
+    @@media (max-width: 600px) {
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

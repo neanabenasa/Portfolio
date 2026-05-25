@@ -1,0 +1,7 @@
+C:\Users\Capecenio\Desktop\MYPROJECTS\NEAN\NEAN\publish\NEAN.exe
+C:\Users\Capecenio\Desktop\MYPROJECTS\NEAN\NEAN\publish\appsettings.Development.json
+C:\Users\Capecenio\Desktop\MYPROJECTS\NEAN\NEAN\publish\appsettings.json
+C:\Users\Capecenio\Desktop\MYPROJECTS\NEAN\NEAN\publish\NEAN.dll
+C:\Users\Capecenio\Desktop\MYPROJECTS\NEAN\NEAN\publish\NEAN.runtimeconfig.json
+C:\Users\Capecenio\Desktop\MYPROJECTS\NEAN\NEAN\publish\NEAN.pdb
+C:\Users\Capecenio\Desktop\MYPROJECTS\NEAN\NEAN\publish\NEAN.deps.json
